@@ -20,7 +20,7 @@ pub fn show_usage() {
     println!(
         "Usage: {} [-V|--version] [-W|--warn] -H on|off|--hyper-threading=on|off [-h|--help]
 
-    -H on|off                   Check if hyper-threading is off
+    -H on|off                   Check if hyper-threading is on or off
     --hyper-threading=on|off
 
     -V                          Show version information
@@ -29,7 +29,7 @@ pub fn show_usage() {
     -W                          Report warning condition instead of critical
     --warn                      if hyper-threading mode does not match
 
-    -h                  Show this help text
+    -h                          Show this help text
     --help
 
 ",

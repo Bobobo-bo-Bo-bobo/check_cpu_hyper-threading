@@ -1,5 +1,5 @@
 pub const NAME: &str = "check_cpu_hyper-threading";
-pub const VERSION: &str = "1.1.0";
+pub const VERSION: &str = "1.1.1";
 
 pub const NAGIOS_OK: i32 = 0;
 pub const NAGIOS_WARNING: i32 = 1;
