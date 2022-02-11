@@ -5,8 +5,14 @@ use std::fs::File;
 use std::io::prelude::*;
 use std::io::BufReader;
 
-pub fn is_hyper_threading_enabled() -> Result<bool, Box<dyn Error>> {
-    let result: bool;
+pub struct HyperThreadingResult {
+    pub enabled: bool,
+    pub cores: i64,
+    pub siblings: i64,
+}
+
+pub fn is_hyper_threading_enabled() -> Result<HyperThreadingResult, Box<dyn Error>> {
+    let enabled: bool;
     let fd = File::open(constants::CPUINFO)?;
     let mut buffer_reader = BufReader::new(fd);
     let mut content = String::new();
@@ -17,12 +23,16 @@ pub fn is_hyper_threading_enabled() -> Result<bool, Box<dyn Error>> {
     let siblings = get_siblings(&content)?;
 
     if cores == siblings {
-        result = false;
+        enabled = false;
     } else {
-        result = true;
+        enabled = true;
     }
 
-    Ok(result)
+    Ok(HyperThreadingResult {
+        enabled,
+        cores,
+        siblings,
+    })
 }
 
 fn get_cpu_cores(raw: &str) -> Result<i64, Box<dyn Error>> {

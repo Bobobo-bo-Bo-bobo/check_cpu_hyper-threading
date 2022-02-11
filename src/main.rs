@@ -74,6 +74,6 @@ fn main() {
 
     let status = result::process_result(&ht_mode, ht_enabled, warn_mode);
 
-    println!("{}", status.message);
+    println!("{} | {}", status.message, status.perfdata);
     process::exit(status.status);
 }
