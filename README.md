@@ -3,6 +3,10 @@ While some workload perform better with hyper-threading enabled other (e.g. HPC 
 
 This Nagios check will check if the systems CPU has hyper-threading enabled or disabled.
 
+# Repositories
+* Primary development repository: https://git.ypbind.de/cgit/check_cpu_hyper-threading/
+* Backup repository: https://github.com/Bobobo-bo-Bo-bobo/check_cpu_hyper-threading
+
 # Requirements
 ## Build
 As a Rust programm a current Rust toolchain is required.
