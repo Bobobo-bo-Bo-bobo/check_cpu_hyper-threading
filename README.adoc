@@ -1,32 +1,43 @@
-# Preface
-While some workload perform better with hyper-threading enabled other (e.g. HPC solver) requires hyper-threading to be disabled.
+= check_cpu_hyperthreading
+:stylesheet: asciidoc.css
 
-This Nagios check will check if the systems CPU has hyper-threading enabled or disabled.
+== Repositories
 
-# Repositories
 * Primary development repository: https://git.ypbind.de/cgit/check_cpu_hyper-threading/
 * Backup repository: https://github.com/Bobobo-bo-Bo-bobo/check_cpu_hyper-threading
 
-# Requirements
-## Build
+== Preface
+
+While some workload perform better with hyper-threading enabled other (e.g. HPC solver) requires hyper-threading to be disabled.
+
+This Nagios check will check if the systems CPU has hyper-threading enabled or disabled.
+
+== Requirements
+
+=== Build
+
 As a Rust programm a current Rust toolchain is required.
 
-# Commandline options
+== Commandline options
 
-| *Option* | *Value* | *Note* |
-|:---------|:--------|:-------|
-| `-H` | `on` or `off` | Check if hyper-threading is on or off|
-| `--hyper-threading` | |  |
-| `-V` | - | Show version information |
-| `--version` | | |
-| `-W` | - | Report warning condition instead of critical if hyper-threading mode does not match |
-| `--warn` | | |
-| `-h` | - | Show this help text |
-| `--help` | | |
+[width="100%",cols="<38%,<33%,<29%",options="header",]
+|===
+|_Option_ |_Value_ |_Note_
+|`-H` |`on` or `off` |Check if hyper-threading is on or off
+|`--hyper-threading` | |
+|`-V` |- |Show version information
+|`--version` | |
+|`-W` |- |Report warning condition instead of critical if hyper-threading mode does not match
+|`--warn` | |
+|`-h` |- |Show this help text
+|`--help` | |
+|===
 
-# License
-## check_cpu_hyper-threading
-```
+== License
+
+=== check_cpu_hyper-threading
+
+....
                     GNU GENERAL PUBLIC LICENSE
                        Version 3, 29 June 2007
 
@@ -701,5 +712,4 @@ may consider it more useful to permit linking proprietary applications with
 the library.  If this is what you want to do, use the GNU Lesser General
 Public License instead of this License.  But first, please read
 <http://www.gnu.org/philosophy/why-not-lgpl.html>.
-```
-
+....
