@@ -1,5 +1,6 @@
-= check_cpu_hyperthreading
+= check_cpu_hyperthreading - Nagios check if CPU has Hyper-threading enabled or disabled
 :stylesheet: asciidoc.css
+:toc: left
 
 == Repositories
 
